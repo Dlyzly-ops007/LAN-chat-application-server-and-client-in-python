@@ -24,6 +24,31 @@ This app uses only Python’s standard libraries except for Tkinter (which comes
 - No third-party modules required.
 
 Check if Tkinter is installed by running:
-```bash
-python -m tkinter
+bash
+`python -m tkinter`
 
+🌐 Using Over a LAN
+
+To use across multiple devices on the same network:
+
+Find the Server Machine’s Local IP
+On the server machine:
+
+`ipconfig`   # Windows
+`ifconfig`   # Linux/Mac
+
+
+Look for an address like 192.168.x.x.
+
+Update HOST in All Files
+Open server_chat.py, client1_chat.py, and client2_chat.py and change:
+
+HOST = '127.0.0.1'
+to:
+HOST = '192.168.x.x'   # your server machine’s IP
+
+Run the Server and Clients
+Start the server on the host machine.
+Start the client scripts on other machines.
+Make sure all machines are on the same Wi-Fi/LAN.
+You’re now chatting over the network!
